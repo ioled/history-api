@@ -1,0 +1,4 @@
+querys.sql
+node_modules/
+env.json
+google-cloud-service-account.json

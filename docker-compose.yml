@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  history-api:
+    build: .
+    ports:
+      - 5020:5020
+    container_name: history-api
