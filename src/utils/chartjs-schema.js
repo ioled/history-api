@@ -72,7 +72,7 @@ exports.chartJsSchema = rows => {
     if (row.time) {
       date = new Date(`${row.date.value} ${row.time} UTC`);
       const timeCorrected = date
-        .toLocaleTimeString('es-ES', {timeZone: 'America/Santiago'})
+        .toLocaleTimeString('es-CL', {hour12: false, timeZone: 'America/Santiago'})
         .split(':');
       response.humidity.labels.push(`${timeCorrected[0]}:${timeCorrected[1]}`);
       response.temperature.labels.push(`${timeCorrected[0]}:${timeCorrected[1]}`);

@@ -18,9 +18,7 @@ exports.getDayGraph = async (req, res) => {
   try {
     const response = await dayQuery(device);
     console.log('[getDayGraph][Response]', response);
-    res.status(200).json({
-      data: response,
-    });
+    res.status(200).json({data: response});
   } catch (error) {
     console.log('[getDayGraph][Error]: There was a problem getting the response', error);
   }
@@ -45,9 +43,7 @@ exports.getWeekGraph = async (req, res) => {
   try {
     const response = await weekQuery(device);
     console.log('[getWeekGraph][Response]', response);
-    res.status(200).json({
-      data: response,
-    });
+    res.status(200).json({data: response});
   } catch (error) {
     console.log('[getWeekGraph][Error]: There was a problem getting the response', error);
     res.status(500).json({error});
@@ -73,9 +69,7 @@ exports.getMonthGraph = async (req, res) => {
   try {
     const response = await monthQuery(device);
     console.log('[getMonthGraph][Response]', response);
-    res.status(200).json({
-      data: response,
-    });
+    res.status(200).json({data: response});
   } catch (error) {
     console.log('[getMonthGraph][Error]: There was a problem getting the response', error);
     res.status(500).json({error});
