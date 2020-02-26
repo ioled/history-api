@@ -30,6 +30,10 @@ deploy d:
 	@echo "[Cloud Function Deployment] Deploying Function"
 	@gcloud functions deploy historyApi --set-env-vars tableName=$(tableName) --runtime nodejs8 --trigger-http --entry-point historyApi
 
+deploy-test dt:
+	@echo "[TESTING] [Cloud Function Deployment] Deploying Function"
+	@gcloud functions deploy TesthistoryApi --set-env-vars tableName=$(tableName) --runtime nodejs8 --trigger-http --entry-point historyApi
+
 run r:
 	@echo "[Running] Running service"
 	@PORT=$(PORT) tableName=$(tableName) node src/start.js
