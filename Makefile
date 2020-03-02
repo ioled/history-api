@@ -36,6 +36,6 @@ deploy-test dt:
 
 run r:
 	@echo "[Running] Running service"
-	@PORT=$(PORT) tableName=$(tableName) node src/start.js
+	@PORT=$(PORT) GOOGLE_APPLICATION_CREDENTIALS="./google-cloud-service-account.json" tableName=$(tableName) node src/start.js
 
 .PHONY: version v init i deploy d run r
