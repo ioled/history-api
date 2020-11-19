@@ -28,7 +28,7 @@ docker-registry reg:
 
 deploy d:
 	@echo "[Cloud Function Deployment] Deploying Function"
-	@gcloud functions deploy historyApi --set-env-vars tableName=$(tableName) --runtime nodejs8 --trigger-http --entry-point historyApi
+	@gcloud functions deploy historyApi --set-env-vars tableName=$(tableName) --runtime nodejs10 --trigger-http --entry-point historyApi
 
 run r:
 	@echo "[Running] Running service"
